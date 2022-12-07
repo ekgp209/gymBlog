@@ -58,11 +58,11 @@ li {
     position: absolute;
     top: 15px;
     right: 50px;
-    height: 20px;
 }
 
 .sign a {
     display: inline-block;
+    height: 12px;
     line-height: 11px;
     padding: 0 12px;
     border-right: 1px solid #ddd;
@@ -79,13 +79,16 @@ li {
 }
 
 #container {
+    z-index: 4;
     position: relative;
     margin: 20px auto;
-    width: 100%;
+    width: 98%;
     min-height: 500px;
     height: auto !important;
     height: 500px;
     background: #fff;
+    font-size: 1em;
+    zoom: 1;
 }
 
 #containerwrap #container {
@@ -137,5 +140,7 @@ li {
     margin: 0;
     margin-left: 230px;
     padding: 40px 20px 20px 20px;
-    width: 1000px;
+
 }
+
+/* 전체 style.css로 이동함. 전체 지워도 될 듯 */

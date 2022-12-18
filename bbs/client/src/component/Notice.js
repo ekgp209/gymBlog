@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BoardList from "./board/BoardList";
 
 function Notice() {
     return (
@@ -94,6 +95,7 @@ function Notice() {
                         </div>
                     </div>
                 </div>
+                <BoardList />
             </Content>
         </div>
     );

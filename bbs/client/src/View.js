@@ -2,8 +2,8 @@ import React from "react";
 import Navigation from "./component/Navigation";
 import RouteLink from "./routes/RouteLink";
 import styled from "styled-components";
-import Main from "./component/Main";
 import MainSrc from "./img/main.png";
+import { Link } from "react-router-dom";
 
 function View() {
     return (
@@ -12,8 +12,11 @@ function View() {
                 <div>
                     <Title>Our Gym</Title>
                     <div className="sign" style={{ position: "absolute", top: "15px", right: "50px", height: "20px" }}>
-                        <Login>로그인</Login>
-                        <Login>회원가입</Login>
+                        <Link to="/login">
+                            <Login>
+                                로그인 <p>|</p> <p>회원가입</p>
+                            </Login>
+                        </Link>
                     </div>
                 </div>
             </Header>
@@ -62,7 +65,6 @@ const Sidebar = styled.div`
     display: inline-block;
     width: 220px;
     /* margin-top: 40px; */
-    background-color: lightblue;
 `;
 
 const Content = styled.div`
@@ -71,12 +73,13 @@ const Content = styled.div`
     margin-left: 10px;
     padding: 40px 20px;
     width: 1000px;
-    background-color: lightcoral;
 `;
 
 const Login = styled.a`
     display: inline-block;
-    line-height: 11px;
+    display: flex;
+    gap: 7px;
+    line-height: 13px;
     padding: 0 12px;
     border-right: 1px solid #ddd;
     color: #666;

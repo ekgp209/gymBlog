@@ -3,7 +3,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Board from "../component/Board";
-import { Main, InfoShare, Motivation, Notice, Question, Tip, WomanBoard } from ".";
+import { Main, InfoShare, Motivation, Notice, Question, Tip, WomanBoard, Login } from ".";
 
 function RouteLink() {
     return (
@@ -17,6 +17,7 @@ function RouteLink() {
             <Route path="/motivation" exact element={<Motivation />} />
             <Route path="/question" exact element={<Question />} />
             <Route path="*" component={<Main />} />
+            <Route path="/login" exact element={<Login />} />
         </Routes>
     );
 }

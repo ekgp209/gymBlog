@@ -18,6 +18,7 @@ function RouteLink() {
             <Route path="/question" exact element={<Question />} />
             <Route path="*" component={<Main />} />
             <Route path="/login" exact element={<Login />} />
+            <Route path="/write" exact element={<Board />} />
         </Routes>
     );
 }
